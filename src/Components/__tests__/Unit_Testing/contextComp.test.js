@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import ContextComp from "../ContextComp";
+import ContextComp from "../../ContextComp";
 
 //describe function is not mandatory, it is basically used to Group our testing of a component.................
 describe("test cases of ContextComp", () => {
@@ -11,9 +11,16 @@ describe("test cases of ContextComp", () => {
     expect(heading).toBeInTheDocument();
   });
 
-  test("Should load Button inside Context Component", () => {
+  test("Should load Change Score Button inside Context Component", () => {
     render(<ContextComp />);
     const button = screen.getByText("Change Score");
+    // Assertion...............
+    expect(button).toBeInTheDocument();
+  });
+
+  test("Should load Click Button inside Context Component", () => {
+    render(<ContextComp />);
+    const button = screen.getByRole("button", {name: 'Click'} );
     // Assertion...............
     expect(button).toBeInTheDocument();
   });

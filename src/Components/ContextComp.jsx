@@ -17,6 +17,10 @@ export default function ContextComp({}) {
           className="border border-black ms-2 p-2"
           >Change Score</button>
 
+          <button
+          className="border border-black ms-2 p-2"
+          >Click</button>
+
           <input className="border border-black ms-2" type="text" />
         </div>
     </div>
